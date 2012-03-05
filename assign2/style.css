@@ -37,6 +37,10 @@
 	    	min-height:44px;
 	    	min-width:44px;
 	    }
+	    .columnsideportrait {
+	    	float:right;
+	    	width:40%;
+	    } 
 
 thead th {
    background-color:#bfb;
@@ -47,3 +51,11 @@ th, td {
   border: thin gray dotted;
   padding: 0.5em;
 }
+
+.wcaghidden
+{position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;}
