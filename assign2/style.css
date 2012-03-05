@@ -10,6 +10,7 @@
                         background-position: bottom right;
                         background-repeat: no-repeat;
                         background-color:black;
+                        background-size: auto;
 			border: 1px solid black;
 			margin: 20px;
 			padding: 20px;
@@ -29,8 +30,10 @@
 			border: 1px solid black;
 			clear: left;
 		}
-	    .navbar li{
+	    .navbar li {
 	    	display: inline;
+	    }
+	    .navbar li a {
 	    	min-height:44px;
 	    	min-width:44px;
 	    }
