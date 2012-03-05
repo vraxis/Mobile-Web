@@ -6,11 +6,19 @@
 		}		
 		#header {
                         color: white;
-                        background-image:url("beethoven-background.gif");
-                        background-position: bottom right;
-                        background-repeat: no-repeat;
-                        background-color:black;
-                        background-size: auto;
+                       background-image: linear-gradient(left , rgb(0,0,0) 23%, rgb(76,102,102) 67%);
+background-image: -o-linear-gradient(left , rgb(0,0,0) 23%, rgb(76,102,102) 67%);
+background-image: -moz-linear-gradient(left , rgb(0,0,0) 23%, rgb(76,102,102) 67%);
+background-image: -webkit-linear-gradient(left , rgb(0,0,0) 23%, rgb(76,102,102) 67%);
+background-image: -ms-linear-gradient(left , rgb(0,0,0) 23%, rgb(76,102,102) 67%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	right bottom,
+	color-stop(0.23, rgb(0,0,0)),
+	color-stop(0.67, rgb(76,102,102))
+);
 			border: 1px solid black;
 			margin: 20px;
 			padding: 20px;
@@ -41,6 +49,10 @@
 	    	float:right;
 	    	width:40%;
 	    } 
+	    
+	    a:hover, a:focus, a:active {
+	    	color: lightgray;
+	    }
 
 thead th {
    background-color:#bfb;

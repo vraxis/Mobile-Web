@@ -1,0 +1,14 @@
+	#footer {
+		float:left;
+		width:20%;
+		margin-top:0px;
+	}
+	
+	#content{
+		float:right;
+		width: 65%;
+	}
+	
+	#footer ul li {
+		display:block;
+	}
