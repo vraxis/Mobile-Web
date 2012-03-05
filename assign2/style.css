@@ -3,7 +3,6 @@
 		#container {
 			text-align: left;
 			margin: 0 auto;
-			width: 1000px;
 		}		
 		#header {
                         color: white;
@@ -16,19 +15,9 @@
 			padding: 20px;
                         padding-bottom:0;
 		}
-		#sidebar {
-			background-color:#baa;
-			border: 1px solid black;
-			width: 200px;
-			margin-left: 20px;
-			padding-right:1em;
-			float: left;
-			display: inline; /* floats are handled as block elements, this is to fix 
-							   a margin collapsing bug in IE */
-		}
 		#content {
 			background-color:white;
-			margin-left: 242px;
+			margin-left: 20px;
 			margin-right: 20px;
 			border: 1px solid black;
 			padding: 20px;
@@ -40,7 +29,11 @@
 			border: 1px solid black;
 			clear: left;
 		}
-
+	    .navbar li{
+	    	display: inline;
+	    	min-height:44px;
+	    	min-width:44px;
+	    }
 
 thead th {
    background-color:#bfb;
