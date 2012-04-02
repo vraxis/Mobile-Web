@@ -34,7 +34,7 @@
 			var desc = $('.rooms-header-add-desc')[0].value
 			rooms.list.push({
 				desc : desc
-			});
+			}); 
 			  //why no cache
 			if(typeof sendRoomDesc != "undefined"){
 				sendRoomDesc(desc);
