@@ -35,7 +35,7 @@
 			rooms.list.push({
 				desc : desc
 			});
-			 
+			  //why no cache
 			if(typeof sendRoomDesc != undefined){
 				sendRoomDesc(desc);
 			}
