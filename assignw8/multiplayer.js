@@ -1,9 +1,6 @@
 (function(){
 	
 	window.multiplayerStart = function() {
-		if(typeof EasyWebSocket == "undefined") {
-			return;
-		}
 		try{
 	   var socket = new EasyWebSocket("ws://verdantsandbox.com/a8"); }
 		catch(e){
