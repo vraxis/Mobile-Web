@@ -16,3 +16,4 @@
        ExpiresDefault "access"
    </filesmatch>
 </IfModule>
+AddType text/cache-manifest .appcache
