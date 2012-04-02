@@ -9,7 +9,10 @@ index.html
 #scripts
 day.js
 script/zepto.min.js
+http://easywebsocket.org/easyWebSocket.min.js
+multiplayer.js
 FALLBACK:
 offline.html
 
 NETWORK:
+multiplayer.js

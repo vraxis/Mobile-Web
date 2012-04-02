@@ -5,7 +5,6 @@
 		list : []
 	};
 	var html = "";
-
 	function renderRooms() {
 
 		html = "";
@@ -40,4 +39,22 @@
 		})
 	});
 
+	
+
+	window.addRoom = function(roomDesc){
+		if (localStorage && JSON) {
+		rooms.list.push({
+			desc : roomDesc
+		});
+		renderRooms();
+		
+		}
+	}
+	window.getRandomRoomDesc = function(){
+		if (rooms.list.length > 0) {
+			return rooms.list[Math.floor(Math.random()*rooms.list.length)].desc.replace("'","&apos;");
+		}
+	}
+	
+	
 })(window);
