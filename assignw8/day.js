@@ -52,7 +52,7 @@
 	}
 	window.getRandomRoomDesc = function(){
 		if (rooms.list.length > 0) {
-			return rooms.list[Math.floor(Math.random()*rooms.list.length)].desc.replace("'","&apos;");
+			return rooms.list[Math.floor(Math.random()*rooms.list.length)].desc.replace("'","&apos;").replace('"',"&quot;");
 		}
 	}
 	

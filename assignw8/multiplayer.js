@@ -3,10 +3,10 @@
 	$(window.document).ready(function() {
 	
 	   var socket = new EasyWebSocket("ws://verdantsandbox.com/a8");
-	    var me = Math.random(1000000);
+	    var me = Math.random();
 	    
 	    socket.onopen = function(){
-		socket.send("{sender:"+me+",room:'"+getRandomRoomDesc()+"'}")
+		socket.send('{"sender":'+me+',"room":"'+getRandomRoomDesc()+'"}')
 	    }
 	    socket.onmessage = function(event){
 	    if(JSON) {
@@ -14,6 +14,7 @@
 	    	if(message.sender && message.sender != me) {
 	    		addRoom(message.room);
 	    	}
+	    	alert(message);
 	    }	
 	    	
 	    }
