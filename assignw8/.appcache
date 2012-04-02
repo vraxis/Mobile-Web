@@ -1,0 +1,16 @@
+CACHE MANIFEST
+
+CACHE:
+#Version 1
+
+#pages
+index.html
+
+#scripts
+day.js
+script/zepto.min.js
+FALLBACK:
+/ /offline.html
+
+NETWORK:
+*
