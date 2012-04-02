@@ -3,8 +3,49 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>The Day</title>
-		<script src="script/zepto.min.js" type="appdivcation/javascript"></script>
-		<script src="day.js" type="appdivcation/javascript"></script>
+		<script src="script/zepto.min.js" type="application/javascript"></script>
+		<script src="day.js" type="application/javascript"></script>
+		
+		<script type="application/javascript">
+			var rooms = localStorage &&
+							localStorage["roomsDesc"] ?
+									 JSON.parse(localStorage["roomsDesc"]) :
+												{list:[]};
+			var html = "";
+
+			function renderRooms() {
+
+					html = "";
+					if(localStorage && JSON) {
+						localStorage["roomsDesc"] = JSON.stringify(rooms);
+					}
+					var html = '<div class="rooms-building-floor">';
+					for(var count =0; count < rooms.list.length; ++count) {
+					var currDesc = rooms.list[count].desc;
+					if(count % 3 == 0 && count != 0) {
+						html += '<div class="rooms-building-floor-number">'+Math.ceil(count/3)+'</div></div><div class="rooms-building-floor">'
+					}
+
+					html+='<div class="rooms-building-floor-room">'+currDesc+'</div>';
+				}
+				html+='<div class="rooms-building-floor-number">'+Math.ceil(count/3)+'</div></div>';
+				$('.rooms-building').html(html);
+			}
+
+	$(window.document).ready(function(){
+				renderRooms();
+				$(".rooms-header-addbutton").click(function(){
+					var desc = $('.rooms-header-add-desc')[0].value
+					rooms.list.push({desc:desc});
+					renderRooms();
+				}
+			)
+	});
+	
+		</script>
+		
+		
+		
     </head>
     <style>
     	/* = layout
@@ -43,29 +84,18 @@
     <body>
     <div id="header">
     <h1 class="header-title">The Empty Room</h1>
-    <p>A place for you to create, and watch others create. A building that time will forget momentarily, whose rooms vanish and rearrange. What will you find here I wonder, before it is destroyed?</p>
+    <p>A place for you to create, and watch others create. A building that time will forget momentarily, whose rooms vanish and rearrange. What will you find here?</p>
     </div>
     <div class="rooms">
     
     <div class="rooms-header">
     	<h2>Building</h2>
-    	<ul>
-    		<div>+Add Room</div>
-    	</ul>
+    	<a href="#" class="rooms-header-add">+Add Room</a>
+    	<label for="roomDesc">Room</label>
+    	<input name='roomDesc' class="rooms-header-add-desc" type='text' maxlength="100"></input>
+    	<button class='rooms-header-addbutton'>Add Room</button>
     </div>
     <div class="rooms-building">
-     <div class="rooms-building-floor">
-    	<div class="rooms-building-floor-room">What can I have is what I have</div>
-     	<div class="rooms-building-floor-room">Flying is what I have</div>
-     	<div class="rooms-building-floor-room"> Bring is what I have</div>
-     	<div class="rooms-building-floor-number">2</div>
-     </div>
-     <div class="rooms-building-floor">
-     	<div class="rooms-building-floor-room">Sorrow is what I have</div>
-     	<div class="rooms-building-floor-room">Love is what I have</div>
-     	<div class="rooms-building-floor-room">Build is what I have</div>
-     	<div class="rooms-building-floor-number">1</div>
-     </div>
      	
     </div>
     
@@ -73,6 +103,7 @@
     
     
      <div class="addroom">
+     
      </div>
     
     </body>
