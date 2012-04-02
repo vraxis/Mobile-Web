@@ -1,10 +1,14 @@
 (function(){
 	
 	window.multiplayerStart = function() {
-		if(typeof multiplayerStart == "undefined") {
+		if(typeof EasyWebSocket == "undefined") {
 			return;
 		}
-	   var socket = new EasyWebSocket("ws://verdantsandbox.com/a8");
+		try{
+	   var socket = new EasyWebSocket("ws://verdantsandbox.com/a8"); }
+		catch(e){
+			return;
+		}
 	    var me = Math.random();
 	    
 	    window.sendRoomDesc = function(desc){
