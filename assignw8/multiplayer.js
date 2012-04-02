@@ -1,6 +1,6 @@
 (function(){
 	
-	$(window.document).ready(function() {
+	window.multiplayerStart = function() {
 	
 	   var socket = new EasyWebSocket("ws://verdantsandbox.com/a8");
 	    var me = Math.random();
@@ -23,5 +23,5 @@
 	    }	
 	    	
 	    }
-	});
+	};
 })()
