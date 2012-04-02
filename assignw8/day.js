@@ -36,7 +36,7 @@
 				desc : desc
 			});
 			
-			if(sendRoomDesc){
+			if(typeof sendRoomDesc != undefined){
 				sendRoomDesc(desc);
 			}
 			renderRooms();
