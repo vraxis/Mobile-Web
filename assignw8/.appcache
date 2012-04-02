@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 CACHE:
-#Version 1121
+#Version 11211
 
 #pages
 index.html
@@ -12,6 +12,5 @@ script/zepto.min.js
 multiplayer.js
 FALLBACK:
 offline.html
-script/easyWebSocket.js
 
 NETWORK:
