@@ -20,7 +20,6 @@
 	    	if(message.sender && message.sender != me) {
 	    		addRoom(message.room);
 	    	}
-	    	alert(message);
 	    }	
 	    	
 	    }
