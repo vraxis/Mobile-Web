@@ -1,16 +1,16 @@
 CACHE MANIFEST
 
 CACHE:
-#Version 1
+#Version 111
 
 #pages
-index.html
-
+http://www.verdantsandbox.com/~patrick/a8/index.html
+http://www.verdantsandbox.com/~patrick/a8/
 #scripts
-day.js
-script/zepto.min.js
+http://www.verdantsandbox.com/~patrick/a8/day.js
+http://www.verdantsandbox.com/~patrick/a8/script/zepto.min.js
 http://easywebsocket.org/easyWebSocket.min.js
-multiplayer.js
+http://www.verdantsandbox.com/~patrick/a8/multiplayer.js
 FALLBACK:
 offline.html
 
