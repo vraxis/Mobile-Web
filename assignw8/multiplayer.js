@@ -5,8 +5,14 @@
 	   var socket = new EasyWebSocket("ws://verdantsandbox.com/a8");
 	    var me = Math.random();
 	    
+	    window.sendRoomDesc = function(desc){
+	    	if(socket) {
+	    		socket.send('{"sender":'+me+',"room":"'+desc+'"}')
+	    	}
+	    };
+	    
 	    socket.onopen = function(){
-		socket.send('{"sender":'+me+',"room":"'+getRandomRoomDesc()+'"}')
+	    	sendRoomDesc(getRandomRoomDesc());
 	    }
 	    socket.onmessage = function(event){
 	    if(JSON) {

@@ -35,6 +35,10 @@
 			rooms.list.push({
 				desc : desc
 			});
+			
+			if(sendRoomDesc){
+				sendRoomDesc(desc);
+			}
 			renderRooms();
 		})
 	});
