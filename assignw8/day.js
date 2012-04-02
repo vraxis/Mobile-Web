@@ -35,7 +35,7 @@
 			rooms.list.push({
 				desc : desc
 			});
-			
+			 
 			if(typeof sendRoomDesc != undefined){
 				sendRoomDesc(desc);
 			}
